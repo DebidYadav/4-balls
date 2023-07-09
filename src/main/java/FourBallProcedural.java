@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class TryProcessing extends PApplet {
+public class FourBallProcedural extends PApplet {
 
     private static final int HEIGHT = 500;
     private static final int WIDTH = 500;
@@ -17,7 +17,7 @@ public class TryProcessing extends PApplet {
 
 
     public static void main(String[] args){
-        PApplet.main("TryProcessing", args);
+        PApplet.main("FourBallProcedural", args);
     }
 
     @Override
