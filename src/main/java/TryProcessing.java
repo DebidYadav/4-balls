@@ -2,11 +2,18 @@ import processing.core.PApplet;
 
 public class TryProcessing extends PApplet {
 
+    private static final int HEIGHT = 500;
+    private static final int WIDTH = 500;
+    private static final float placementOfBallOne = ((float) 1 / 5);
+    private static final float placementOfBallTwo = ((float) 2 / 5);
+    private static final float placementOfBallThree = ((float) 3 / 5);
+    private static final float placementOfBallFour = ((float) 4 / 5);
+    private static final int shapeWidth = 25;
+    private static final int shapeHeight = 25;
     private int circleOneCoordinate = 0;
     private int circleTwoCoordinate = 0;
     private int circleThreeCoordinate = 0;
     private int circleFourCoordinate = 0;
-    static  int y =500;
 
 
     public static void main(String[] args){
@@ -16,7 +23,7 @@ public class TryProcessing extends PApplet {
     @Override
     public void settings() {
         super.settings();
-        size(500,500);
+        size(WIDTH, HEIGHT);
     }
 
     @Override
@@ -26,29 +33,29 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-        drawCircleOne(circleOneCoordinate,y*((float)1/5));
-        drawCircleTwo(circleTwoCoordinate,y*((float)2/5));
-        drawCircleThree(circleThreeCoordinate,y*((float)3/5));
-        drawCircleFour(circleFourCoordinate,y*((float)4/5));
+        drawCircleOne(circleOneCoordinate,HEIGHT* placementOfBallOne);
+        drawCircleTwo(circleTwoCoordinate,HEIGHT* placementOfBallTwo);
+        drawCircleThree(circleThreeCoordinate,HEIGHT* placementOfBallThree);
+        drawCircleFour(circleFourCoordinate,HEIGHT* placementOfBallFour);
     }
 
     void drawCircleOne(float xCoordinate, float yCoordinate){
-        ellipse(xCoordinate,yCoordinate,25,25);
+        ellipse(xCoordinate,yCoordinate, shapeWidth, shapeHeight);
         circleOneCoordinate++;
     }
 
     void drawCircleTwo(float xCoordinate, float yCoordinate){
-        ellipse(xCoordinate,yCoordinate,25,25);
+        ellipse(xCoordinate,yCoordinate, shapeWidth, shapeHeight);
         circleTwoCoordinate+=2;
     }
 
     void drawCircleThree(float xCoordinate, float yCoordinate){
-        ellipse(xCoordinate,yCoordinate,25,25);
+        ellipse(xCoordinate,yCoordinate, shapeWidth, shapeHeight);
         circleThreeCoordinate+=3;
     }
 
     void drawCircleFour(float xCoordinate, float yCoordinate){
-        ellipse(xCoordinate,yCoordinate,25,25);
+        ellipse(xCoordinate,yCoordinate, shapeWidth, shapeHeight);
         circleFourCoordinate+=4;
     }
 
