@@ -33,10 +33,14 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-        drawCircleOne(circleOneCoordinate,HEIGHT* placementOfBallOne);
-        drawCircleTwo(circleTwoCoordinate,HEIGHT* placementOfBallTwo);
-        drawCircleThree(circleThreeCoordinate,HEIGHT* placementOfBallThree);
-        drawCircleFour(circleFourCoordinate,HEIGHT* placementOfBallFour);
+        drawCircleOne(circleOneCoordinate, getyCoordinate(placementOfBallOne));
+        drawCircleTwo(circleTwoCoordinate, getyCoordinate(placementOfBallTwo));
+        drawCircleThree(circleThreeCoordinate, getyCoordinate(placementOfBallThree));
+        drawCircleFour(circleFourCoordinate, getyCoordinate(placementOfBallFour));
+    }
+
+    private float getyCoordinate(float placementOfBallOne) {
+        return HEIGHT * placementOfBallOne;
     }
 
     void drawCircleOne(float xCoordinate, float yCoordinate){
