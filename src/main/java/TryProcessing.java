@@ -2,8 +2,12 @@ import processing.core.PApplet;
 
 public class TryProcessing extends PApplet {
 
-    static int x = 0;
+    private int circleOneCoordinate = 0;
+    private int circleTwoCoordinate = 0;
+    private int circleThreeCoordinate = 0;
+    private int circleFourCoordinate = 0;
     static  int y =500;
+
 
     public static void main(String[] args){
         PApplet.main("TryProcessing", args);
@@ -22,15 +26,30 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-        drawCircle(x,y*((float)1/5));
-        drawCircle(x,y*((float)2/5));
-        drawCircle(x,y*((float)3/5));
-        drawCircle(x,y*((float)4/5));
+        drawCircleOne(circleOneCoordinate,y*((float)1/5));
+        drawCircleTwo(circleTwoCoordinate,y*((float)2/5));
+        drawCircleThree(circleThreeCoordinate,y*((float)3/5));
+        drawCircleFour(circleFourCoordinate,y*((float)4/5));
     }
 
-    void drawCircle(float xCoordinate, float yCoordinate){
+    void drawCircleOne(float xCoordinate, float yCoordinate){
         ellipse(xCoordinate,yCoordinate,25,25);
-        x++;
+        circleOneCoordinate++;
+    }
+
+    void drawCircleTwo(float xCoordinate, float yCoordinate){
+        ellipse(xCoordinate,yCoordinate,25,25);
+        circleTwoCoordinate+=2;
+    }
+
+    void drawCircleThree(float xCoordinate, float yCoordinate){
+        ellipse(xCoordinate,yCoordinate,25,25);
+        circleThreeCoordinate+=3;
+    }
+
+    void drawCircleFour(float xCoordinate, float yCoordinate){
+        ellipse(xCoordinate,yCoordinate,25,25);
+        circleFourCoordinate+=4;
     }
 
 }
